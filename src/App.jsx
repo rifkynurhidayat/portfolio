@@ -101,14 +101,16 @@ function App() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">{project.map((ListProject) =>
 
-                        <div key={ListProject.id} className="bg-violet-500 p-4 rounded-2xl" data-aos="flip-up"  data-aos-duration="1000">
+                        <div key={ListProject.id} className="bg-violet-500 p-4 rounded-2xl" data-aos="flip-up" data-aos-duration="1000">
                             <img src={ListProject.logo} className='rounded-4xl' alt="" />
                             <h1 className='text-center mt-4 text-2xl font-bold'>{ListProject.name}</h1>
-                            <p className='mt-2 font-bold'>Tech Stack :
+                            <p className='mt-2 font-bold'>Tech Stack :     </p>
+
+                            <div className="flex flex-wrap gap-2">
                                 {ListProject.tech.map((item) =>
-                                    <span key={item} className='bg-zinc-600 rounded m-1'>{item}</span>
+                                    <span key={item} className='bg-zinc-800 rounded m-1'>{item}</span>
                                 )}
-                            </p>
+                            </div>
                         </div>
                     )}
                     </div>
