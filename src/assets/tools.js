@@ -23,42 +23,36 @@ const tools = [
     },
     {
         id: 3,
-        name: 'Node Js',
-        logo: nodejs,
-
-    },
-    {
-        id: 4,
         name: 'Bootstrap',
         logo: boostrap,
     },
     {
-        id: 5,
+        id: 4,
         name: 'tailwind',
         logo: tailwind,
     },
     {
-        id: 6,
+        id: 5,
         name: 'vue',
         logo: vue,
     },
     {
-        id: 7,
+        id: 6,
         name: 'php',
         logo:php,
     },
     {
-        id: 8,
+        id: 7,
         name: 'laravel',
         logo: laravel,
     },
     {
-        id: 9,
+        id: 8,
         name: 'mysql',
         logo:mysql
     },
     {
-        id:10,
+        id:9,
         name:'postaman',
         logo:postaman
     }
