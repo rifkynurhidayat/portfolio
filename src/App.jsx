@@ -1,35 +1,91 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+
 import './App.css'
 import foto from './assets/hero/foto.jpg'
 import tools from './assets/tools.js'
 import project from './assets/project.js'
 
+const text = "Hi, Saya Rifky Nurhidayat."
+
 function App() {
     return (
         <>
-            <div className="hero min-h-screen flex items-center animate__animated animate__fadeInLeft" id='beranda'>
-                <div className="container mx-auto px-6 lg:px-12">
+            <div
+                className="hero min-h-screen flex items-center animate__animated animate__fadeInLeft"
+                id="beranda" >
+                <div className="container mx-auto px-4 sm:px-6 lg:px-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
 
-                        {/* Kiri */}
+                        {/* Hero Content */}
                         <div className="text-center md:text-left">
-                            <div className="flex items-center gap-3 mb-6 bg-zinc-700 w-fit mx-auto md:mx-0 p-4 rounded-2xl">
-                                <img
-                                    src={foto}
-                                    alt="Hero"
-                                    className="w-10 h-10 rounded-md object-cover"
-                                />
-                                <q>Fullstack Web Developer</q>
+
+                            {/* Badge */}
+                            <div className="flex items-center justify-center md:justify-start mb-6 md:mb-8">
+                                <div className="flex items-center gap-3 bg-zinc-700 w-fit px-4 py-3 rounded-2xl text-sm sm:text-base">
+                                    <q>Fullstack Web Developer</q>
+                                </div>
                             </div>
 
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                                Hi, Saya <span className="text-violet-500">Rifky Nurhidayat</span>
+                            {/* Heading */}
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+                                {/* Hi, Saya */}
+                                <span className="block md:inline">
+                                    {"Hi, Saya".split("").map((char, index) => (
+                                        <motion.span
+                                            key={index}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: index * 0.05,
+                                            }}
+                                        >
+                                            {char === " " ? "\u00A0" : char}
+                                        </motion.span>
+                                    ))}
+                                </span>
+
+                                {/* Rifky */}
+                                <span className="block md:inline md:ml-3 text-violet-500">
+                                    {"Rifky".split("").map((char, index) => (
+                                        <motion.span
+                                            key={index}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: (index + 8) * 0.05,
+                                            }}
+                                        >
+                                            {char}
+                                        </motion.span>
+                                    ))}
+                                </span>
+
+                                <span className="block md:inline md:ml-3 text-violet-500">
+                                    {"Nurhidayat".split("").map((char, index) => (
+                                        <motion.span
+                                            key={index}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: (index + 13) * 0.05,
+                                            }}
+                                        >
+                                            {char}
+                                        </motion.span>
+                                    ))}
+                                </span>
+
                             </h1>
 
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            {/* Buttons */}
+                            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
                                 <a
                                     href="#"
-                                    className="bg-violet-700 px-6 py-3 rounded-xl hover:bg-violet-500 transition"
+                                    className="bg-violet-700 px-5 sm:px-6 py-3 rounded-xl hover:bg-violet-500 transition text-center"
                                 >
                                     Download CV
                                     <i className="ri-download-line ml-2"></i>
@@ -37,20 +93,13 @@ function App() {
 
                                 <a
                                     href="#project"
-                                    className="bg-zinc-700 px-6 py-3 rounded-xl hover:bg-zinc-600 transition"
+                                    className="bg-zinc-700 px-5 sm:px-6 py-3 rounded-xl hover:bg-zinc-600 transition text-center"
                                 >
                                     Lihat Project
                                     <i className="ri-arrow-down-line ml-2"></i>
                                 </a>
                             </div>
-                        </div>
 
-                        {/* Kanan */}
-                        <div className="flex justify-center md:justify-end">
-                            <img
-                                src={foto}
-                                alt="Hero" className="w-64 sm:w-80 md:w-96 lg:w-112.5 rounded-2xl object-cover"
-                            />
                         </div>
 
                     </div>
@@ -99,20 +148,24 @@ function App() {
                     <h1 className='text-2xl text-center font-bold '>Project</h1>
                     <p className='text-zinc-500 text-center mt-6'>Berikut beberapa project yang telah diselesaikan:</p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">{project.map((ListProject) =>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">
+                        {project.map((ListProject) =>
+                            <div key={ListProject.id} className="bg-violet-500 p-4 rounded-2xl" data-aos="flip-up" data-aos-duration="1000">
+                                <img src={ListProject.logo} className='rounded-4xl' alt="" />
+                                <h1 className='text-center mt-4 text-2xl font-bold'>{ListProject.name}</h1>
+                                <p className='mt-2 font-bold'>Tech Stack :     </p>
 
-                        <div key={ListProject.id} className="bg-violet-500 p-4 rounded-2xl" data-aos="flip-up" data-aos-duration="1000">
-                            <img src={ListProject.logo} className='rounded-4xl' alt="" />
-                            <h1 className='text-center mt-4 text-2xl font-bold'>{ListProject.name}</h1>
-                            <p className='mt-2 font-bold'>Tech Stack :     </p>
-
-                            <div className="flex flex-wrap gap-2">
-                                {ListProject.tech.map((item) =>
-                                    <span key={item} className='bg-zinc-800 rounded m-1'>{item}</span>
-                                )}
+                                <div className="flex flex-wrap gap-2">
+                                    {ListProject.tech.map((item) =>
+                                        <span key={item} className='bg-zinc-800 rounded m-1'>{item}</span>
+                                    )}
+                                </div>
+                                <p className="mt-4 max-w-2xl mx-auto md:mx-0 text-sm sm:text-base leading-7 sm:leading-8 font-light text-zinc-300 tracking-wide text-justify">
+                                    {ListProject.description}
+                                </p>
                             </div>
-                        </div>
-                    )}
+                        )}
+
                     </div>
                 </div>
             </section>
