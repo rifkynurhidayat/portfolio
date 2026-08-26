@@ -9,6 +9,7 @@ import php from '../assets/tools/PHP.png';
 import laravel from '../assets/tools/laravel.jpg';
 import mysql from '../assets/tools/mysql.png';
 import postaman from '../assets/tools/postaman.png';
+import nextjs from '../assets/tools/nextjs.png';
 
 const tools = [
     {
@@ -37,22 +38,27 @@ const tools = [
         logo: vue,
     },
     {
-        id: 6,
+        id:6,
+        name: 'next.js',
+        logo: nextjs,
+    },
+    {
+        id: 7,
         name: 'php',
         logo:php,
     },
     {
-        id: 7,
+        id: 8,
         name: 'laravel',
         logo: laravel,
     },
     {
-        id: 8,
+        id: 9,
         name: 'mysql',
         logo:mysql
     },
     {
-        id:9,
+        id:10,
         name:'postaman',
         logo:postaman
     }
