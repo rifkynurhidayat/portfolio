@@ -31,7 +31,7 @@ const project = [
         id: 4,
         name: 'Toko Online',
         logo: tokoOnline,
-        tech: ['HTML', 'CSS', 'Bootstrap', 'PHP', 'Laravel', 'Mysql','Midtrans','RajaOngkir'],
+        tech: ['HTML', 'CSS', 'Bootstrap', 'PHP', 'Laravel', 'Mysql','API Midtrans','API RajaOngkir'],
         description: 'Toko Online adalah aplikasi berbasis web untuk mengelola katalog produk dan penjualan secara online, mulai dari pengelolaan produk hingga proses pemesanan oleh pelanggan',
     },
 
