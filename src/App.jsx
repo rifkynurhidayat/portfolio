@@ -163,6 +163,7 @@ function App() {
                                 <p className="mt-4 max-w-2xl mx-auto md:mx-0 text-sm sm:text-base leading-7 sm:leading-8 font-light text-zinc-300 tracking-wide text-justify">
                                     {ListProject.description}
                                 </p>
+                               <a href={ListProject.link}>Link Github</a>
                             </div>
                         )}
 
@@ -178,7 +179,7 @@ function App() {
 
                     <div className="flex flex-col items-center gap-6">
 
-                        {/* Email */}
+                      
                         <a
                             href="mailto:rifkynurhidayat623@gmail.com"
                             className="flex items-center gap-3 rounded-lg bg-zinc-800 px-5 py-3 text-white transition hover:bg-zinc-700"
@@ -189,7 +190,7 @@ function App() {
                             </span>
                         </a>
 
-                        {/* LinkedIn */}
+                    
                         <a
                             href="https://www.linkedin.com/in/rifky-nurhidayat/"
                             target="_blank"
