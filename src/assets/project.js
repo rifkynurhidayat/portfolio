@@ -4,6 +4,7 @@ import manage from './project/manage.png';
 import tabulasi from './project/tabulasi.jpeg';
 import marketplace from './project/marketplace.jpg';
 import tokoOnline from './project/tokoOnline.jpg';
+import arsip from './project/arsip.png';
 
 const project = [
     {
@@ -38,6 +39,14 @@ const project = [
         description: 'aplikasi Toko Online dengan berbasis web untuk mengelola katalog produk dan penjualan secara online, mulai dari pengelolaan produk hingga proses pemesanan oleh pelanggan',
         link:'https://github.com/rifkynurhidayat/Ecommerce-terintegrasi-API-RajaOngkir-dan-Midtrans.git'
     },
+    {
+        id: 5,
+        name: 'E-Arsip',
+        logo: arsip,
+        tech: ['HTML', 'CSS', 'Bootstrap', 'PHP', 'Laravel', 'Mysql'],
+        description: 'Aplikasi E-Arsip digunakan untuk mengelola dokumen elektronik secara digital, memudahkan penyimpanan, pencarian, dan pengambilan dokumen.',
+        link:'https://github.com/rifkynurhidayat/E-Arsip.git'
+    }
 
     
 ]
