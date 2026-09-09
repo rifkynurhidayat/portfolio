@@ -48,7 +48,4 @@ const project = [
         link:'https://github.com/rifkynurhidayat/E-Arsip.git'
     }
 
-    
-]
-
-export default project;
+];
